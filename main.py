@@ -12,8 +12,6 @@ from databaze import Databaze
 #controller spustí kozoli a vyžádá si vstupní data-výběr akce...pohyb v menu...
 
 
-
-
 if __name__ == "__main__":
     view = UI()
     databaze = Databaze()
