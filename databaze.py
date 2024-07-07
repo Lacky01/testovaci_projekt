@@ -60,6 +60,8 @@ d = Databaze()
 d.najdi_klienta("František", "Vomáčka")
 
 
+
+
 #########################################################
 # zde něco pro UI - print získaných dat z kontoroleru/modelu 
 
