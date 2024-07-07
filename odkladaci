@@ -1,0 +1,75 @@
+def validuj_vstup_str(inputString: str, cast_jmena: str) ->  str:
+    print(f"validace pro: {cast_jmena}")
+    
+    if len(inputString) == 0:
+        return f"prazdne {cast_jmena}"
+    
+    elif len(inputString) < 3:
+        return f"kratke {cast_jmena}"
+        
+    elif " " in inputString:
+        return f"{cast_jmena} obsahuje mezeru"
+        
+    # toto by šlo i jednodušeji? .isalpha()
+    elif any(char.isdigit() for char in inputString):
+        return f"{cast_jmena} obsahuje cislo"
+    
+    #elif any(inputString.isalpha()):
+        #return f"{cast_jmena} obsahuje cislo"
+
+    else:
+        return "OK"
+
+
+def jmeno_vstup():
+    vstup = input(f"zadej jméno: ")
+    vysledek_validace = validuj_vstup_str(vstup, "jméno")
+    if "OK" in vysledek_validace:
+        print(f"jméno je ok")
+        jmeno = vstup.lower().capitalize()
+        print(jmeno)
+    else:
+        print(vysledek_validace)
+        jmeno_vstup()
+
+def prijmeni_vstup():
+    vstup = input(f"zadej příjmení: ")
+    vysledek_validace = validuj_vstup_str(vstup, "příjmení")
+    if "OK" in vysledek_validace:
+        # zde bude něco co uloží správné jméno...
+
+        print(f"příjmení je ok")
+    else:
+        print(vysledek_validace)
+        prijmeni_vstup()
+
+
+
+jmeno_vstup()
+prijmeni_vstup()
+
+
+#validuj_vstup_str(vstup)
+
+        
+
+
+"""
+
+jmeno = "Franta"
+prijmeni = "Flinta"
+vek = 35
+tel_cislo = "123456"
+retezec = "s2j"
+print(validuj_vstup_str(retezec))
+
+v = "franta"
+while len(v) < 10:
+    v += "_"
+print(v, len(v))
+"""
+
+
+            
+
+
