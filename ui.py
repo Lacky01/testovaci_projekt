@@ -99,7 +99,7 @@ class UI:
         print("všechno v dict:\n")
         for k, v in data.items():
             print(k, v)
-        """HI
+        """
 
     # Vyčištění terminálu
     def vycisti(self):
